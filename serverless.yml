@@ -1,4 +1,4 @@
-service: serverless-test-rest-api
+service: serverless-node-rest-api
 
 provider:
   name: aws

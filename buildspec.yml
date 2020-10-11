@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Building project...
       - echo Build started on `date`      
-      - serverless deploy -V -s $Env_Name
+      - serverless deploy -V -s $Env_Name --stage dev
   post_build:
     commands:
           - echo Build completed on `date`
