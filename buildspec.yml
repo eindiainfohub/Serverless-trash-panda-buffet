@@ -12,15 +12,7 @@ phases:
     commands:
       - echo Building project...
       - echo Build started on `date`      
-      - serverless deploy
+      - serverless deploy --stage cicd | tee deploy.out
   post_build:
     commands:
           - echo Build completed on `date`
-
-artifacts:
-  files:
-    - '**/*'
-
-cache:
-  paths:
-    - '/root/.npm/**/*'
