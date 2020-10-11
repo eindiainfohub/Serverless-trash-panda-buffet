@@ -7,13 +7,14 @@ phases:
     commands:
       - echo Installing dependencies...
       - npm ci
-      - npm install
+      - npm install 6.10.3
       - npm install serverless -g
   build:
     commands:
       - echo Building project...
       - echo Build started on `date`      
-      - serverless deploy
+      #- serverless deploy
+      - npm --version
   post_build:
     commands:
           - echo Build completed on `date`
