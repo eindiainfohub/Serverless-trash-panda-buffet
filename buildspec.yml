@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Building project...
       - echo Build started on `date`      
-      #- serverless deploy
+      - serverless deploy
       - npm --version
   post_build:
     commands:
