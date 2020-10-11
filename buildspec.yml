@@ -6,6 +6,9 @@ phases:
       nodejs: 12
     commands:
       - echo Installing dependencies...
+      - apt-get install build-essential checkinstall
+      - apt-get install libssl-dev
+      - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
       - npm ci
       - npm install 6.10.3
       - npm install serverless -g
