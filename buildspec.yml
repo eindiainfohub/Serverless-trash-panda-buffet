@@ -15,7 +15,8 @@ phases:
       - echo Build started on `date`      
       #- npm run deploy
       #- npm run build:client
-      - npm run deploy:aws && npm run deploy:client && npm run deploy:data
+      #- npm run deploy:aws && npm run deploy:client && npm run deploy:data
+      - npm run remove
   post_build:
     commands:
           - echo Build completed on `date`
