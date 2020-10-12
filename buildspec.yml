@@ -13,8 +13,8 @@ phases:
     commands:
       - echo Building project...
       - echo Build started on `date`      
-      - npm run deploy
-      - npm run build:client && serverless client deploy --no-confirm
+      #- npm run deploy
+      - npm run build:client
   post_build:
     commands:
           - echo Build completed on `date`
