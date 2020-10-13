@@ -7,8 +7,10 @@ phases:
     commands:
       - echo Installing dependencies...
       #- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-      - npm ci
       - npm install
+      - npm update && npm audit fix --force
+      - npm ci
+      
   build:
     commands:
       - echo Building project...
@@ -16,7 +18,7 @@ phases:
       #- npm run deploy
       #- npm run build:client
       #- npm run deploy:aws && npm run deploy:client && npm run deploy:data
-      - npm run deploy
+      #- npm run deploy
   post_build:
     commands:
           - echo Build completed on `date`
